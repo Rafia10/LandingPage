@@ -1,0 +1,20 @@
+<nav>
+  <ul class="pagination">
+    <li class="page-item" [ngClass]="{ disabled: currentPage === 0 }">
+      <a class="page-link" (click)="setPrev()">Previous</a>
+    </li>
+    <li
+      *ngFor="let page of this.pageOptions; let i = index"
+      class="page-item"
+      [ngClass]="i === currentPage ? 'active' : ''"
+    >
+      <a (click)="change(page)" class="page-link">{{ i + 1 }}</a>
+    </li>
+    <li
+      class="page-item"
+      [ngClass]="{ disabled: currentPage === pageOptions.length }"
+    >
+      <a class="page-link" (click)="setNext()">Next</a>
+    </li>
+  </ul>
+</nav>

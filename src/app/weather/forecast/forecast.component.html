@@ -1,0 +1,9 @@
+<ul class="list-group">
+  <li
+    *ngFor="let forcast of this.forcastData$ | async"
+    class="weather-item list-group-item"
+  >
+    <p class="temp">{{ forcast?.temp | number: "1.2-2" }}°C</p>
+    <p class="day">{{ forcast?.dateString | date: "E" }}</p>
+  </li>
+</ul>
