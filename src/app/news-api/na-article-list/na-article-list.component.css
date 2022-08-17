@@ -3,7 +3,11 @@
   left: 100px;;
   height: 100%;
 
+
   flex-direction: column;
   justify-content: center;
   display: flex;
+}
+.row:hover {
+  color: rgb(44, 81, 248);
 }
